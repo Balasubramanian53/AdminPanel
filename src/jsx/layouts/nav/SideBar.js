@@ -37,9 +37,8 @@ class MM extends Component {
 }
 
 class SideBar extends Component {
-   /// Open menu
+   
    componentDidMount() {
-      // sidebar open/close
       var btn = document.querySelector(".nav-control");
       var aaa = document.querySelector("#main-wrapper");
 
@@ -75,9 +74,11 @@ class SideBar extends Component {
 
          BannerList=["Add-Banner","List-Banner"],
 
-         RestaurantList=["List-Restaurant"],
+         Restaurant=["Add-Restaurant","List-Restaurant"],
 
-         Product = ["Add-Product","List-Product"];
+         Product = ["Add-Product","List-Product"],
+
+         CategoryList = ["Add-Category","List-Category"];
 
 
       return (
@@ -112,7 +113,7 @@ class SideBar extends Component {
                      </Link>
                      <ul >
                         <li>
-                           <Link to="/Add-Product">Add Product</Link>
+                           <Link to="/Add-Product">Add Products</Link>
                         </li>                     
                         <li>
                            <Link to="/List-Product">Product List</Link>
@@ -122,7 +123,7 @@ class SideBar extends Component {
                 
                   <li
                      className={`${
-                        RestaurantList.includes(path.slice(1)) ? "mm-active" : ""
+                        Restaurant.includes(path.slice(1)) ? "mm-active" : ""
                      }`}
                   >
                      <Link
@@ -136,7 +137,7 @@ class SideBar extends Component {
                      </Link>
                      <ul >
                         <li>
-                           <Link to="/ui-accordion">Add Restaurant</Link>
+                           <Link to="/Add-Restaurant">Add Restaurant</Link>
                         </li>
                         <li>
                            <Link to="/List-Restaurant">List Restaurant</Link>
@@ -168,7 +169,7 @@ class SideBar extends Component {
 
                   <li
                      className={`${
-                        Product.includes(path.slice(1)) ? "mm-active" : ""
+                        CategoryList.includes(path.slice(1)) ? "mm-active" : ""
                      }`}
                   >
                      <Link
@@ -182,10 +183,10 @@ class SideBar extends Component {
                      </Link>
                      <ul >
                         <li>
-                           <Link to="/form-element">Add Category</Link>
+                           <Link to="/Add-Category">Add Category</Link>
                         </li>
                         <li>
-                           <Link to="/form-wizard">List Category</Link>
+                           <Link to="/List-Category">List Category</Link>
                         </li>                       
                      </ul>
                   </li>
